@@ -1,8 +1,8 @@
 {
-  "name": "test-github-actions",
-  "version": "1.0.0",
+  "name": "zzy-test-github-actions",
+  "version": "1.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "docs/.vuepress/dist/index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vuepress dev docs",
@@ -22,5 +22,11 @@
   "homepage": "https://github.com/jayconscious/test-github-actions#readme",
   "devDependencies": {
     "vuepress": "^1.8.2"
+  },
+  "dependencies": {
+
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
