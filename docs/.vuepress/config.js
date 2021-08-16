@@ -1,6 +1,5 @@
 module.exports = {
-  title: 'Hello VuePress',
+  title: 'Hello Vuepress Docker test',
   description: 'Just playing around',
-  base: '/test-github-actions/',
-  
+  base: '/',
 }
