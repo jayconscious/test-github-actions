@@ -16,8 +16,8 @@ jobs:
           npm run build
 
       - name: Build the Docker image
-         run:|
-           docker login --username=${{ secrets.DOCKER_USERNAME }} --password=${{ secrets.DOCKER_PASSWORD }}
-           docker build -t test-github-actions:latest . 
-           docker tag test-github-actions jaywadetest-github-actions:latest 
-           docker push jaywadetest-github-actions:latest
+        run: |
+          docker login --username=${{ secrets.DOCKER_USERNAME }} --password=${{ secrets.DOCKER_PASSWORD }}
+          docker build -t test-github-actions:latest . 
+          docker tag test-github-actions jaywadetest-github-actions:latest 
+          docker push jaywadetest-github-actions:latest
