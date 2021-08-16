@@ -21,3 +21,11 @@ jobs:
           docker build -t test-github-actions:latest . 
           docker tag test-github-actions jaywade/test-github-actions:latest 
           docker push jaywade/test-github-actions:latest
+      - name: ssh docker login
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          port: ${{ secrets.SSH_PORT }}
+          username: ${{ secrets.SSH_USERNAME }}
+          password: ${{ secrets.SSH_PASSWORD }}
+          script: cd ~ && sh test.sh ${{ secrets.DOCKER_USERNAME }} ${{ secrets.DOCKER_PASSWORD }}
